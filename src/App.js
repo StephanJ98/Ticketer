@@ -75,7 +75,7 @@ class App extends Component {
           </label>
           <div>
             {this.state.uploads.map((value, index) => {
-              return <img key={index} src={value} alt='pequeña imagen' width="100px" />
+              return <img key={index} src={value} alt='pequeña imagen' width="40px" height="40px" />
             })}
           </div>
           <button onClick={this.generateText} className="button">Obtener Texto</button>
@@ -83,13 +83,13 @@ class App extends Component {
         <section className="results">
           {this.state.documents.map((value, index) => {
             return (
-              <div key={index} className="resultsContainer">
+              <div key={index} className="resultContainer">
                 <div className="result">
                   <div className="resultConfidence">
-                    <small><strong>Nivel de confianza:</strong> {value.confidence}</small>
+                    <small><strong>Nivel de confianza:</strong> {value.confidence} %</small>
                   </div>
                   <div className="resultText">
-                    <small><strong>Texto obtenido:</strong> <textarea>{value.text}</textarea></small>
+                    <small><strong>Texto obtenido:</strong></small> <textarea>{value.text}</textarea>
                   </div>
                 </div>
               </div>
