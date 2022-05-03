@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    font-family: cursive;
+}
+
+body, html {
+    background-color: aliceblue;
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#header {
+    flex: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#body {
+    flex: 9;
+    height: 100vh;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    overflow-y: scroll;
+}
+
+.ticket {
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #d4cbbf;
+    min-height: 200px;
+}
+
+.ticketTitleContainer {
+    flex: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px dotted white;
+}
+
+.ticketTitleContainer > textarea {
+    flex: 7;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    resize: none;
+    text-align: center;
+    outline: none;
+}
+
+.ticketTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ticketTitleContainer > .form {
+    flex: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #d4cbbf;
+}
+
+.form > * {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.ticket > textarea {
+    flex: 8;
+    width: 100%;
+    resize: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    outline: none;
+    text-align: center;
+}
+
+#addImg {
+    width: 60px;
+    height: 60px;
+    color: grey;
+}
